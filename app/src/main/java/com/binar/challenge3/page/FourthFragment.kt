@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioButton
 import androidx.navigation.findNavController
 import com.binar.challenge3.Person
 import com.binar.challenge3.databinding.FragmentFourthBinding
@@ -14,7 +13,6 @@ class FourthFragment : Fragment() {
 
     private var _binding: FragmentFourthBinding? = null
     private val binding get() = _binding!!
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,16 +25,33 @@ class FourthFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        val checkedId = binding.rgKelamin.checkedRadioButtonId
-//        val selectedKelamin = binding.rgKelamin.getChildAt(checkedId) as RadioButton
-//        val selectedKelaminText = selectedKelamin.text
-
         binding.btnBackToScree3.setOnClickListener {
-            val person = Person("nama",null,null,null,null)
+
+            val result = calcResult(5,170.0,60.0,"Pria")
+            val person = Person("nama",5,170.0,60.0,"Pria",result)
             val action = FourthFragmentDirections.actionFourthFragmentToThirdFragment(person)
             it.findNavController().navigate(action)
         }
 
+
+    }
+
+    private fun calcResult(age:Int, height: Double, weight: Double, gender: String): Double{
+
+        var result = 0.0
+
+        when(gender){
+            "Pria" -> {
+                result =
+                    (10*weight) + (6.25*height) - (5*age)+5
+            }
+            "Wanita" -> {
+                result =
+                    (10*weight) + (6.25*height) - (5*age)-161
+            }
+        }
+
+        return result
 
     }
 

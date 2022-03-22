@@ -30,7 +30,7 @@ class SecondFragment : Fragment() {
 
         binding.btnGoToScreen3.setOnClickListener {
             val name = binding.etNama.text.toString()
-            val person = Person(name, null,null,null,null)
+            val person = Person(name)
             val action = SecondFragmentDirections.actionSecondFragmentToThirdFragment(person)
             it.findNavController().navigate(action)
         }

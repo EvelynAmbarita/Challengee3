@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/tv_nama2"
+        android:id="@+id/tv_age"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -49,14 +49,14 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_nama3"
+        app:layout_constraintBottom_toTopOf="@+id/tv_height"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
 
     <TextView
-        android:id="@+id/tv_nama3"
+        android:id="@+id/tv_height"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -67,14 +67,14 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_nama4"
+        app:layout_constraintBottom_toTopOf="@+id/tv_weight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nama2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_age" />
 
     <TextView
-        android:id="@+id/tv_nama4"
+        android:id="@+id/tv_weight"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -85,14 +85,14 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_nama5"
+        app:layout_constraintBottom_toTopOf="@+id/tv_gender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nama3" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_height" />
 
     <TextView
-        android:id="@+id/tv_nama5"
+        android:id="@+id/tv_gender"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -103,14 +103,14 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_nama6"
+        app:layout_constraintBottom_toTopOf="@+id/tv_result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nama4" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_weight" />
 
     <TextView
-        android:id="@+id/tv_nama6"
+        android:id="@+id/tv_result"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -125,7 +125,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nama5" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_gender" />
 
     <Button
         android:id="@+id/btn_go_to_screen_4"

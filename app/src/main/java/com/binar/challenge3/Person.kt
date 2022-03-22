@@ -7,8 +7,9 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Person(
     val name: String,
-    val age: Int?,
-    val height: Double?,
-    val weight: Double?,
-    val gender: String?,
+    val age: Int?=null,
+    val height: Double?=null,
+    val weight: Double?=null,
+    val gender: String?=null,
+    val result: Double?=null
 ): Parcelable
