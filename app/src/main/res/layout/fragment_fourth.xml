@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_nama"
+        android:id="@+id/et_umur"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -31,7 +31,7 @@
         android:background="@drawable/edittext_background"
         android:ems="10"
         android:hint="Umur anda"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="0.15" />
 
     <EditText
-        android:id="@+id/et_nama2"
+        android:id="@+id/et_tinggi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -50,15 +50,15 @@
         android:background="@drawable/edittext_background"
         android:ems="10"
         android:hint="Tinggi anda (cm)"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nama" />
+        app:layout_constraintTop_toBottomOf="@+id/et_umur" />
 
     <EditText
-        android:id="@+id/et_nama3"
+        android:id="@+id/et_berat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -68,12 +68,12 @@
         android:background="@drawable/edittext_background"
         android:ems="10"
         android:hint="Berat badan anda (kg)"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nama2" />
+        app:layout_constraintTop_toBottomOf="@+id/et_tinggi" />
 
     <TextView
         android:id="@+id/textView2"
@@ -83,12 +83,12 @@
         android:text="Jenis Kelamin"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/et_nama3"
-        app:layout_constraintStart_toStartOf="@+id/et_nama3"
-        app:layout_constraintTop_toBottomOf="@+id/et_nama3" />
+        app:layout_constraintEnd_toEndOf="@+id/et_berat"
+        app:layout_constraintStart_toStartOf="@+id/et_berat"
+        app:layout_constraintTop_toBottomOf="@+id/et_berat" />
 
     <Button
-        android:id="@+id/btn_go_to_screen_2"
+        android:id="@+id/btn_back_to_scree_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -100,11 +100,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/rg_kelamin"
         app:layout_constraintVertical_bias="0.0" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/rg_kelamin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
