@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.binar.challenge3.Person
 import com.binar.challenge3.R
+import com.binar.challenge3.ValidationForm.isValid
 import com.binar.challenge3.databinding.FragmentFourthBinding
 
 class FourthFragment : Fragment() {
@@ -33,16 +34,18 @@ class FourthFragment : Fragment() {
 
         binding.btnBackToScree3.setOnClickListener {
 
-            val name = args.nama
-            val age = binding.etAge.text.toString().toInt()
-            val height = binding.etHeight.text.toString().toDouble()
-            val weight = binding.etWeight.text.toString().toDouble()
-            val gender = getSelectedGender()
+            if (isValidForm()){
+                val name = args.nama
+                val age = binding.etAge.text.toString().toInt()
+                val height = binding.etHeight.text.toString().toDouble()
+                val weight = binding.etWeight.text.toString().toDouble()
+                val gender = getSelectedGender()
 
-            val result = calcResult(age, height, weight, gender)
-            val person = Person(name, age, height, weight, gender, result)
-            val action = FourthFragmentDirections.actionFourthFragmentToThirdFragment(person)
-            it.findNavController().navigate(action)
+                val result = calcResult(age, height, weight, gender)
+                val person = Person(name, age, height, weight, gender, result)
+                val action = FourthFragmentDirections.actionFourthFragmentToThirdFragment(person)
+                it.findNavController().navigate(action)
+            }
         }
 
 
@@ -72,6 +75,17 @@ class FourthFragment : Fragment() {
         }
 
         return result
+
+    }
+
+    private fun isValidForm():Boolean{
+
+        val age = binding.etAge
+        val height = binding.etHeight
+        val weight = binding.etWeight
+        val gender = binding.rgGender
+
+        return age.isValid() and height.isValid() and weight.isValid() and gender.isValid()
 
     }
 
