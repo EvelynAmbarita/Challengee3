@@ -1,18 +1,24 @@
 package com.binar.challenge3.page
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
 import com.binar.challenge3.Person
+import com.binar.challenge3.R
 import com.binar.challenge3.databinding.FragmentFourthBinding
 
 class FourthFragment : Fragment() {
 
     private var _binding: FragmentFourthBinding? = null
     private val binding get() = _binding!!
+
+    private val args: FourthFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,12 +33,26 @@ class FourthFragment : Fragment() {
 
         binding.btnBackToScree3.setOnClickListener {
 
-            val result = calcResult(5,170.0,60.0,"Pria")
-            val person = Person("nama",5,170.0,60.0,"Pria",result)
+            val name = args.nama
+            val age = binding.etAge.text.toString().toInt()
+            val height = binding.etHeight.text.toString().toDouble()
+            val weight = binding.etWeight.text.toString().toDouble()
+            val gender = getSelectedGender()
+
+            val result = calcResult(age, height, weight, gender)
+            val person = Person(name, age, height, weight, gender, result)
             val action = FourthFragmentDirections.actionFourthFragmentToThirdFragment(person)
             it.findNavController().navigate(action)
         }
 
+
+    }
+
+    private fun getSelectedGender():String{
+
+        val selectedId = binding.rgGender.checkedRadioButtonId
+        val selectedRadio = activity?.findViewById<RadioButton>(selectedId)
+        return selectedRadio?.text.toString()
 
     }
 
