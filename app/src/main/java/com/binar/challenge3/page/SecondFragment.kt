@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.binar.challenge3.Person
-import com.binar.challenge3.R
 import com.binar.challenge3.ValidationForm.isValid
 import com.binar.challenge3.databinding.FragmentSecondBinding
 

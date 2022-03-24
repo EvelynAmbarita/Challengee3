@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
-import com.binar.challenge3.R
 import com.binar.challenge3.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {

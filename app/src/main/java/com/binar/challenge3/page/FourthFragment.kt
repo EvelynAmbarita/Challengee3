@@ -1,7 +1,6 @@
 package com.binar.challenge3.page
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +9,6 @@ import android.widget.RadioButton
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.binar.challenge3.Person
-import com.binar.challenge3.R
 import com.binar.challenge3.ValidationForm.isValid
 import com.binar.challenge3.databinding.FragmentFourthBinding
 
