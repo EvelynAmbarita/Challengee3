@@ -47,28 +47,34 @@ class ThirdFragment : Fragment() {
     }
 
     private fun showResult(){
-        binding.tvAge.visibility = View.VISIBLE
-        binding.tvHeight.visibility = View.VISIBLE
-        binding.tvWeight.visibility = View.VISIBLE
-        binding.tvGender.visibility = View.VISIBLE
-        binding.tvResult.visibility = View.VISIBLE
-        binding.tvNama.updateLayoutParams<ConstraintLayout.LayoutParams> { verticalBias = 0.0f }
+        with(binding){
+            tvAge.visibility = View.VISIBLE
+            tvHeight.visibility = View.VISIBLE
+            tvWeight.visibility = View.VISIBLE
+            tvGender.visibility = View.VISIBLE
+            tvResult.visibility = View.VISIBLE
+            btnGoToScreen4.visibility = View.GONE
+            tvNama.updateLayoutParams<ConstraintLayout.LayoutParams> { verticalBias = 0.0f }
 
-        binding.tvAge.text = "Umur: ${args.person.age} tahun"
-        binding.tvHeight.text = "Tinggi: ${args.person.height}cm"
-        binding.tvWeight.text = "Berat: ${args.person.weight}kg"
-        binding.tvGender.text = "Jenis Kelamin: ${args.person.gender}"
-        binding.tvResult.text = "Jumlah BMR: \n${args.person.result} Kalori/hari"
+            tvAge.text = "Umur: ${args.person.age} tahun"
+            tvHeight.text = "Tinggi: ${args.person.height}cm"
+            tvWeight.text = "Berat: ${args.person.weight}kg"
+            tvGender.text = "Jenis Kelamin: ${args.person.gender}"
+            tvResult.text = "Jumlah BMR: \n${args.person.result} Kalori/hari"
+        }
 
     }
 
     private fun hideResult(){
-        binding.tvAge.visibility = View.GONE
-        binding.tvHeight.visibility = View.GONE
-        binding.tvWeight.visibility = View.GONE
-        binding.tvGender.visibility = View.GONE
-        binding.tvResult.visibility = View.GONE
-        binding.tvNama.updateLayoutParams<ConstraintLayout.LayoutParams> { verticalBias = 1.0f }
+        with(binding){
+            tvAge.visibility = View.GONE
+            tvHeight.visibility = View.GONE
+            tvWeight.visibility = View.GONE
+            tvGender.visibility = View.GONE
+            tvResult.visibility = View.GONE
+            btnGoToScreen4.visibility = View.VISIBLE
+            tvNama.updateLayoutParams<ConstraintLayout.LayoutParams> { verticalBias = 1.0f }
+        }
     }
 
     override fun onDestroyView() {

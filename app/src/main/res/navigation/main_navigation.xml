@@ -10,7 +10,11 @@
         android:label="FirstFragment" >
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
+            app:destination="@id/secondFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
@@ -18,7 +22,11 @@
         android:label="SecondFragment" >
         <action
             android:id="@+id/action_secondFragment_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
+            app:destination="@id/thirdFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/fade_out"/>
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
@@ -26,7 +34,11 @@
         android:label="ThirdFragment" >
         <action
             android:id="@+id/action_thirdFragment_to_fourthFragment"
-            app:destination="@id/fourthFragment" />
+            app:destination="@id/fourthFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/fade_out"/>
         <argument
             android:name="person"
             app:argType="com.binar.challenge3.Person" />
@@ -37,7 +49,11 @@
         android:label="FourthFragment" >
         <action
             android:id="@+id/action_fourthFragment_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
+            app:destination="@id/thirdFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@android:anim/fade_out"/>
         <argument
             android:name="nama"
             app:argType="string" />
