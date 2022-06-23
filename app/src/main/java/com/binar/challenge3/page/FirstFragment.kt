@@ -18,6 +18,7 @@ class FirstFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        //Inflate teh layout for this fragment
         _binding = FragmentFirstBinding.inflate(inflater,container,false)
         return binding.root
     }

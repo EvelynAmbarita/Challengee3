@@ -29,7 +29,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/edittext_background"
         android:ems="10"
-        android:hint="Nama anda"
+        android:hint="Nama Anda"
         android:inputType="textPersonName"
         android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_go_to_screen_3"

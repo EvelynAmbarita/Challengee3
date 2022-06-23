@@ -28,7 +28,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Cari tahu kebutuhan minimal kalori harian anda!"
+        android:text="Cek Tabungan Harian Anda!"
         android:textAlignment="center"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_go_to_screen_2"
